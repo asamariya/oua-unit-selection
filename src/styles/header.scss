@@ -1,3 +1,11 @@
 .header {
-	border: 1px solid black;
+	background: #323232;
+	// border: 1px solid black;
+	font-family: $text;
+	color: white;
+	padding: 2em;
+	h1 {
+		font-weight: 600;
+		font-size: 48px;
+	}
 }
