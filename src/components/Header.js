@@ -1,38 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useState, useEffect} from 'react';
+import React, { useContext } from 'react';
 
-export const Header = ({url}) => {
-	const [degreeTitle, setDegreeTitle] = useState('');
-	const [studyLevel, setStudyLevel] = useState('');
-	const [degreeCode, setDegreeCode] = useState('');
+import { DegreeContext } from './DegreeContext'
 
-	const capitalizeFirstLetter = str => {
-		return str.charAt(0).toUpperCase() + str.slice(1);
-	};
+export const Header = () => {
 
-	const fetchDegree = async () => {
-		try {
-			let response = await fetch(url);
-			let data = await response.json();
-			setDegreeTitle(data.title);
-			setStudyLevel(data.studyLevel);
-			setDegreeCode(data.code);
-		} catch (error) {
-			console.log(error);
-		}
-	};
+	const [degree] = useContext(DegreeContext)
+	const { title, studyLevel, code } = degree
 
-	useEffect(() => {
-		fetchDegree();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
 
 	return (
 		<div className="header">
 			<p>
-				{capitalizeFirstLetter(studyLevel)} | {degreeCode}
+				{studyLevel} | {code}
 			</p>
-			<h1>{degreeTitle}</h1>
+			<h1>{title}</h1>
 		</div>
 	);
 };

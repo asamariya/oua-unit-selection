@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.scss';
 
-import {Header} from './components/Header';
+import { DegreeProvider } from './components/DegreeContext';
+import { Header } from './components/Header';
+import DegreeExplorer from './components/DegreeExplorer'
 
-function App() {
-	const url = 'https://catalog.prd1.env.opendev.edu.au/v3/degree/CUR-LIB-DEG-2019';
+const App = () => {
+
 	return (
 		<div className="App">
-			<Header url={url} />
+			<DegreeProvider>
+				<Header />
+				<DegreeExplorer />
+			</DegreeProvider>
 		</div>
 	);
 }
