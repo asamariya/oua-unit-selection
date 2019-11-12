@@ -29,5 +29,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": false,
+  "prettier.semi": true,
+  "prettier.useTabs": true
 }

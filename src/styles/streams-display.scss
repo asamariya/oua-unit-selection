@@ -1,0 +1,20 @@
+.streams {
+  border-right: 1px solid black;
+  text-align: center;
+  font-family: $text;
+  .stream-title {
+    margin-bottom: 1em;
+    height: 11%;
+    border-bottom: 1px solid black;
+    h4 {
+      font-weight: 600;
+    }
+  }
+}
+
+.subject p:first-child {
+  background: #dae3f0;
+  &:hover {
+    background: lightcoral;
+  }
+}

@@ -1,6 +1,8 @@
-@import './styles/variables.scss';
-@import './styles/header.scss';
+@import "./styles/variables.scss";
+@import "./styles/header.scss";
+@import "./styles/streams-display.scss";
 
-h1 {
-	font-weight: normal;
+h1,
+h4 {
+  font-weight: normal;
 }
